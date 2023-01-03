@@ -1,17 +1,23 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import Home from './pages/Home'
-import Authors from './pages/Authors'
-import AboutUs from './pages/Aboutus'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Authors from "./pages/Authors";
+import AboutUs from "./pages/Aboutus";
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <Link to="/"> <div>Home</div></Link>
-        <Link to="/authors"> <div>Author's</div></Link>
-        <Link to="/aboutus"> <div>About Us</div></Link>
+      <nav className="nav">
+        <Link id="home" to="/">
+          <div> Home </div>
+        </Link>
+        <Link id="authors" to="/authors">
+          <div> Author 's</div>
+        </Link>
+        <Link id="aboutus" to="/aboutus">
+          <div> About Us </div>
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
