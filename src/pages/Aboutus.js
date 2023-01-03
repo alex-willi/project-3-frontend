@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <div>
+    <div className="aboutus">
       <div className="profile">
         <div className="cagdas">
-          <h4 className="gitname">Cagdas Kalsen</h4>
+          <h4 className="gitname"> Cagdas Kalsen </h4>
           <a
             href="https://github.com/CagdasKalsen"
             target="_blank"
@@ -31,7 +31,7 @@ function AboutUs() {
           </a>
         </div>
         <div className="brandon">
-          <h4 className="gitname">Brandon Tobin</h4>
+          <h4 className="gitname"> Brandon Tobin </h4>
           <a
             href="https://github.com/BrandonTobin"
             target="_blank"
@@ -56,7 +56,7 @@ function AboutUs() {
           </a>
         </div>
         <div className="alex">
-          <h4 className="gitname">Alex Williams</h4>
+          <h4 className="gitname"> Alex Williams </h4>
           <a
             href="https://github.com/alex-willi"
             target="_blank"
@@ -85,4 +85,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs 
+export default AboutUs;
