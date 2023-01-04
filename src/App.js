@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Authors from "./pages/Authors";
 import AboutUs from "./pages/Aboutus";
-
+import AuthorsDetails from "./components/AuthorsDetails";
 function App() {
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/authors" element={<Authors authors={[1, 2, 3]} />} />
-        <Route path="/authors/:id" element={<Authors />} />
+        <Route path="/authors/:id" element={<AuthorsDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </div>
