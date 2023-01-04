@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/authors" element={<Authors authors={[1, 2, 3]} />} />
+        <Route path="/authors/:id" element={<Authors />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </div>

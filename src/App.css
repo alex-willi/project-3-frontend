@@ -13,7 +13,8 @@ body {
 
 #home,
 #authors,
-#aboutus {
+#aboutus,
+.authorslink {
     text-decoration: none;
 }
 
