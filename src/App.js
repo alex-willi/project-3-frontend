@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Authors from "./pages/Authors";
 import AboutUs from "./pages/Aboutus";
 import AuthorsDetails from "./components/AuthorsDetails";
+import Feed from "./pages/Feed";
 function App() {
   return (
     <div className="App">
@@ -12,8 +13,11 @@ function App() {
         <Link id="home" to="/">
           <div> Home </div>
         </Link>
+        <Link id="feed" to="/feed">
+          <div> Feed </div>
+        </Link>
         <Link id="authors" to="/authors">
-          <div> Author 's</div>
+          <div> Author's</div>
         </Link>
         <Link id="aboutus" to="/aboutus">
           <div> About Us </div>
@@ -21,6 +25,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="/authors" element={<Authors authors={[1, 2, 3]} />} />
         <Route path="/authors/:id" element={<AuthorsDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
