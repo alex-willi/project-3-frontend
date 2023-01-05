@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BannerImage from "../assets/bannerimage.jpeg"
+import bannerimage from "../assets/bannerimage.jpeg";
 import "../styles/Home.css";
 
 function Home() {
   return (
-    <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+    <div className="home" style={{ backgroundImage: `url(${bannerimage})` }}>
       <div className="headerContainer">
         <h1>Sports Posts</h1>
         <p>Dive into everything sports!</p>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-function AuthorsDetails() {
+function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/home/${id}`;
   const [author, setAuthor] = useState(null);
@@ -19,11 +19,19 @@ function AuthorsDetails() {
     <>
       <p className="authorname">{author.name}</p>
       <form>
-        <label htmlFor="image">Image</label>
-        <input id="image" type="text" placeholder="image" />
-        <label htmlFor="title">Title</label>
-        <input id="title" type="text" placeholder="title" />
-        <button className="postbutton">Create New Post</button>
+        <div className="authorpost">
+          <input type="text" placeholder="Title" />
+          <input id="image" type="text" alt="" placeholder="image" />
+          <textarea
+            cols="52"
+            rows="6"
+            type="text"
+            id="textbox"
+            placeholder="Your Comment"
+          ></textarea>
+
+          <button className="postbutton">Create New Post</button>
+        </div>
       </form>
     </>
   ) : (
