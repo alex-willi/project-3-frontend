@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Authors from "./pages/Authors";
 import AboutUs from "./pages/Aboutus";
 import AuthorsDetails from "./components/AuthorsDetails";
+import Feed from "./pages/Feed";
 function App() {
   return (
     <div className="App">
