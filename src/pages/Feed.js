@@ -26,9 +26,9 @@ function Feed(props) {
     </section>
   );
   const loaded = () => {
-    return posts.map((posts) => {
+    return posts.map((posts, index) => {
       return (
-        <div className="feedlist">
+        <div key={index} className="feedlist">
           <h1 className="post-title">{posts.title}</h1>
           <img className="feed-image" src={posts.photo} alt="sports"></img>
           <h1 className="author-name">{posts.body}</h1>
