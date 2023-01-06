@@ -1,56 +1,56 @@
 .feed {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .feedtitle {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 60px;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 60px;
 }
 
 .feed-image {
-  height: 250px;
-  width: auto;
+    height: 250px;
+    width: auto;
 }
 
 .feedlist {
-  width: 70vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  border-radius: 15px;
-  width: 300px;
-  height: 400px;
-  margin: 20px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .all-feeds {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .feedlist:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1300px) {
-  .menuList {
-    grid-template-columns: 1fr 1fr;
-  }
+    .menuList {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-  .menuList {
-    grid-template-columns: 1fr;
-  }
+    .menuList {
+        grid-template-columns: 1fr;
+    }
 }

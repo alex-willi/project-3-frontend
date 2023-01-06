@@ -4,14 +4,10 @@ function Authors(props) {
   const [authors, setAuthors] = useState(null);
   const BASE_URL = "http://localhost:4000/";
   const loaded = () => {
-    return authors.map((author) => {
+    return authors.map((author, index) => {
       return (
-        <div className="authors">
-          <Link
-            key={author.id}
-            className="authorslink"
-            to={`/authors/${author._id}`}
-          >
+        <div key={index} className="authors">
+          <Link className="authorslink" to={`/authors/${author._id}`}>
             <h1>{author.name}</h1>
           </Link>
         </div>
