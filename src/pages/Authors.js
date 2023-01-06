@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 function Authors(props) {
   const [authors, setAuthors] = useState(null);
   const BASE_URL = "http://localhost:4000/";
@@ -28,6 +29,7 @@ function Authors(props) {
       console.log(err);
     }
   }
+
   useEffect(() => {
     fetchUser();
   }, []);
@@ -38,4 +40,5 @@ function Authors(props) {
     </section>
   );
 }
+
 export default Authors;
