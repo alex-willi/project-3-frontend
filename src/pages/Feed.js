@@ -40,11 +40,11 @@ function Feed(props) {
       );
     });
   };
-  
+
   return (
     <div>
-    <h1>Feed Page</h1>
-    <section>{posts && posts.length ? loaded() : loading()}</section>
+      <h1>Feed Page</h1>
+      <section>{posts && posts.length ? loaded() : loading()}</section>
     </div>
   )
 }
