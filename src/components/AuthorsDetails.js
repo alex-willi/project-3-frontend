@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/home/${id}`;
-  const [author, setAuthor] = useState(null);
+  const [author, setAuthor] = useState([]);
   useEffect(() => {
     fetch(URL)
       .then((response) => response.json())

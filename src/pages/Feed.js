@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import "../styles/Feed.css";
-import Authors from "./Authors";
+import "../styles/Feed.css"
 
 function Feed(props) {
   const [posts, setPosts] = useState(null);
@@ -17,9 +16,11 @@ function Feed(props) {
     }
   }
   const BASE_URL = `http://localhost:4000/posts`;
+
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, [BASE_URL]);
+
   const loading = () => (
     <section className="user-list">
       <h1>Loading...</h1>
