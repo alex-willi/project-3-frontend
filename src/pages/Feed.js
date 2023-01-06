@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import React from "react"
-import "../styles/Feed.css"
+import { Link, useParams } from "react-router-dom";
+import React from "react";
+import "../styles/Feed.css";
+import Authors from "./Authors";
 
 function Feed(props) {
   const [posts, setPosts] = useState(null);
@@ -10,12 +11,12 @@ function Feed(props) {
       const response = await fetch(BASE_URL);
       const posts = await response.json();
       setPosts(posts);
-      console.log(posts.title)
+      console.log(posts.title);
     } catch (err) {
       console.log(err);
     }
   }
-  const BASE_URL = "http://localhost:4000/posts";
+  const BASE_URL = `http://localhost:4000/posts`;
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -27,15 +28,10 @@ function Feed(props) {
   const loaded = () => {
     return posts.map((posts) => {
       return (
-        <div className="feed">
-          <Link
-            key={posts.id}
-            className="feedlist"
-            to={`/posts/${posts._id}`}
-          >
-            <h1>{posts.title}</h1>
-            <img src={posts.photo} alt="sports"></img>
-          </Link>
+        <div className="feedlist">
+          <h1 className="post-title">{posts.title}</h1>
+          <img className="feed-image" src={posts.photo} alt="sports"></img>
+          <h1 className="author-name">{posts.body}</h1>
         </div>
       );
     });
@@ -44,8 +40,8 @@ function Feed(props) {
   return (
     <div>
       <h1 className="feedtitle">Feed Page</h1>
-      <section>{posts && posts.length ? loaded() : loading()}</section>
+      <section className="all-feeds">{posts && posts.length ? loaded() : loading()}</section>
     </div>
-  )
+  );
 }
 export default Feed;
