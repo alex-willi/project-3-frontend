@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/home/${id}`;
   // const AUTHORS_URL = `http://localhost:4000/posts/${id}`;
-  const [author, setAuthor] = useState(null);
+  const [author, setAuthor] = useState([]);
   const [newpost, setNewpost] = useState({
     title: "",
     photo: "",
     body: "",
   });
-
   const handleChange = (event) => {
     setNewpost({ ...newpost, [event.target.name]: event.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const post = { ...newpost };
@@ -32,7 +29,7 @@ function AuthorsDetails(props) {
         requestOptions
       );
       const comments = await response.json();
-      setAuthor([...newpost, comments]);
+      setAuthor([...author, comments]);
       console.log(setNewpost);
       setNewpost({
         comments,
@@ -50,7 +47,6 @@ function AuthorsDetails(props) {
       })
       .catch(console.err);
   }, [URL]);
-
   return author ? (
     <>
       <p className="authorname"> {author.name} </p>
@@ -90,5 +86,4 @@ function AuthorsDetails(props) {
     <p> LOADING... </p>
   );
 }
-
 export default AuthorsDetails;
