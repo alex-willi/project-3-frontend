@@ -26,12 +26,12 @@ function Feed(props) {
     </section>
   );
   const loaded = () => {
-    return posts.map((posts) => {
+    return posts.map((posts, index) => {
       return (
-        <div className="authors">
-          <h1>{posts.title}</h1>
-          <img src={posts.photo} alt="sports"></img>
-          <h1>{posts.body}</h1>
+        <div key={index} className="feedlist">
+          <h1 className="post-title">{posts.title}</h1>
+          <img className="feed-image" src={posts.photo} alt="sports"></img>
+          <h1 className="author-name">{posts.body}</h1>
         </div>
       );
     });
@@ -39,8 +39,8 @@ function Feed(props) {
 
   return (
     <div>
-      <h1>Feed Page</h1>
-      <section>{posts && posts.length ? loaded() : loading()}</section>
+      <h1 className="feedtitle">Feed Page</h1>
+      <section className="all-feeds">{posts && posts.length ? loaded() : loading()}</section>
     </div>
   );
 }
