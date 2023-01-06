@@ -27,10 +27,10 @@ function Feed(props) {
   const loaded = () => {
     return posts.map((posts) => {
       return (
-        <div className="authors">
+        <div className="feed">
           <Link
             key={posts.id}
-            className="authorslink"
+            className="feedlist"
             to={`/posts/${posts._id}`}
           >
             <h1>{posts.title}</h1>
@@ -43,7 +43,7 @@ function Feed(props) {
 
   return (
     <div>
-      <h1>Feed Page</h1>
+      <h1 className="feedtitle">Feed Page</h1>
       <section>{posts && posts.length ? loaded() : loading()}</section>
     </div>
   )
