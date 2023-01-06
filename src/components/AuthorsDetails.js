@@ -4,40 +4,44 @@ import { useParams } from "react-router";
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/home/${id}`;
+  // const AUTHORS_URL = `http://localhost:4000/posts/${id}`;
   const [author, setAuthor] = useState(null);
   const [newpost, setNewpost] = useState({
     title: "",
-    image: "",
+    photo: "",
     body: "",
   });
+
   const handleChange = (event) => {
-    const prevInput = { ...newpost };
-    prevInput[event.target.name] = event.target.value;
-    setNewpost(prevInput);
+    setNewpost({ ...newpost, [event.target.name]: event.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const comment = { ...newpost };
+    const post = { ...newpost };
     try {
       const requestOptions = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(comment),
+        body: JSON.stringify(post),
       };
-      const response = await fetch(URL, requestOptions);
+      const response = await fetch(
+        `http://localhost:4000/posts/`,
+        requestOptions
+      );
       const comments = await response.json();
-      setAuthor([...author, comments]);
+      setAuthor([...newpost, comments]);
+      console.log(setNewpost);
       setNewpost({
-        title: "",
-        image: "",
-        body: "",
+        comments,
       });
     } catch (err) {
       console.log(err);
     }
   };
+  console.log(newpost);
   useEffect(() => {
     fetch(URL)
       .then((response) => response.json())
@@ -49,17 +53,18 @@ function AuthorsDetails(props) {
 
   return author ? (
     <>
-      <p className="authorname">{author.name}</p>
+      <p className="authorname"> {author.name} </p>
       <form onSubmit={handleSubmit}>
         <div className="authorpost">
           <input
             type="text"
-            name="name"
+            name="title"
             placeholder="Title"
             value={newpost.title}
             onChange={handleChange}
           />
           <input
+            name="photo"
             id="image"
             type="text"
             alt=""
@@ -68,21 +73,21 @@ function AuthorsDetails(props) {
             onChange={handleChange}
           />
           <textarea
+            name="body"
             cols="52"
             rows="6"
             type="text"
             id="textbox"
-            placeholder="Your Comment"
+            placeholder="body"
             value={newpost.body}
             onChange={handleChange}
           ></textarea>
-
           <input type="submit" value="Create Post" />
         </div>
       </form>
     </>
   ) : (
-    <p>LOADING...</p>
+    <p> LOADING... </p>
   );
 }
 
