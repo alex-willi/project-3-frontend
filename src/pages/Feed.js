@@ -11,7 +11,6 @@ function Feed(props) {
       const response = await fetch(BASE_URL);
       const posts = await response.json();
       setPosts(posts);
-      console.log(posts.title);
     } catch (err) {
       console.log(err);
     }
@@ -26,9 +25,9 @@ function Feed(props) {
     </section>
   );
   const loaded = () => {
-    return posts.map((posts) => {
+    return posts.map((posts, index) => {
       return (
-        <div className="authors">
+        <div key={index} className="authors">
           <h1>{posts.title}</h1>
           <img src={posts.photo} alt="sports"></img>
           <h1>{posts.body}</h1>
