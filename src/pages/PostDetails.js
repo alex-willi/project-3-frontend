@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
+import Comments from "../components/Comments";
 
 function PostDetails() {
   const { id } = useParams()
@@ -24,7 +25,10 @@ function PostDetails() {
   }, [])
 
   if (post) {
-    return <Post post={post} author={author} />
+    return <div>
+      <Post post={post} author={author} />
+      <Comments />
+    </div>
   }
 
   return <LoadingPlaceholder />
