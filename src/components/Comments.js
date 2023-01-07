@@ -11,7 +11,7 @@ function Comments() {
     setComment(e.target.value)
   }
   return (
-    <div className="div-container">
+    <div className="container">
       {comments.map((text) => (
         <div className="comment-container">{text}</div>
       ))}
