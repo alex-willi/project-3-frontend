@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
 import "../styles/Feed.css"
+import Post from '../components/Post'
+import LoadingPlaceholder from "../components/LoadingPlaceholder";
 
 function Feed(props) {
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState([]);
   async function fetchPosts() {
     try {
       const response = await fetch(BASE_URL);
       const posts = await response.json();
       setPosts(posts);
-      console.log(posts.title);
     } catch (err) {
       console.log(err);
     }
@@ -19,34 +19,30 @@ function Feed(props) {
 
   useEffect(() => {
     fetchPosts();
-  }, [BASE_URL]);
+  }, []);
 
-  const loading = () => (
-    <section className="user-list">
-      <h1>Loading...</h1>
-    </section>
-  );
-  const loaded = () => {
-    return posts.map((posts, index) => {
-      return (
-        <div key={index} className="feedlist">
-          <Link key={posts.id}
-            className="postlink"
-            to={`/posts/${posts._id}`}>
-            <h1 className="post-title">{posts.title}</h1>
-            <img className="feed-image" src={posts.photo} alt="sports"></img>
-            <h1 className="author-name">{posts.body}</h1>
-          </Link>
-        </div>
-      );
-    });
-  };
+  if (posts) {
+    return (
+      <>
+        <h1 className="feedtitle">Feed Page</h1>
+        <section className="all-feeds">
+          {posts.map(post => {
+            return (
+                <Link
+                  key={post.id}
+                  className="postlink"
+                  to={`/posts/${post._id}`}
+                >
 
-  return (
-    <div>
-      <h1 className="feedtitle">Feed Page</h1>
-      <section className="all-feeds">{posts && posts.length ? loaded() : loading()}</section>
-    </div>
-  );
+                  <Post key={post.id} post={post} />
+                </Link>
+            )
+          })}
+        </section>
+      </>
+    );
+  }
+
+  return <LoadingPlaceholder />
 }
 export default Feed;
