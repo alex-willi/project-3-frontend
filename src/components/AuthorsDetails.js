@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 function AuthorsDetails(props) {
   const { id } = useParams();
-  const URL = `http://localhost:4000/home/${id}`;
+  const URL = `http://localhost:4000/authors/${id}`;
   // const AUTHORS_URL = `http://localhost:4000/posts/${id}`;
   const [author, setAuthor] = useState([]);
   const [newpost, setNewpost] = useState({
@@ -25,7 +25,7 @@ function AuthorsDetails(props) {
         body: JSON.stringify(post),
       };
       const response = await fetch(
-        `http://localhost:4000/posts/`,
+        `http://localhost:4000/posts/${id}`,
         requestOptions
       );
       const comments = await response.json();
