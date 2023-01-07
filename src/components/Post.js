@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import React from "react";
 
-function Posts(props) {
-  const [posts, setPosts] = useState();
-  const { id } = useParams();
-  const URL = `http://localhost:4000/posts/${id}`;
-  useEffect(() => {
-    fetch(URL)
-      .then((response) => response.json())
-      .then((json) => {
-        setPosts(json);
-        console.log(json);
-      })
-      .catch(console.err);
-  }, [URL]);
-
-
-
-  return (
-    <h1>hi</h1>
-  )
+function Post(props) {
+  if (props.post) {
+    return (
+      <>
+        <h1 className="post-title">{props.post.title}</h1>
+        <img className="feed-image" src={props.post.photo} alt="sports"></img>
+        <h1>{props.post.body}</h1>
+        {props.author ? <h1 className="author-name">{props.author.name}</h1> : ''}
+      </>
+    )
+  }
 }
-export default Posts;
+
+export default Post;

@@ -1,15 +1,25 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import LoadingPlaceholder from "./LoadingPlaceholder";
+import Post from "./Post";
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/authors/${id}`;
-  // const AUTHORS_URL = `http://localhost:4000/posts/${id}`;
   const [author, setAuthor] = useState([]);
   const [newpost, setNewpost] = useState({
     title: "",
     photo: "",
     body: "",
   });
+  const getPostsHTML = () => {
+    if (author.posts) {
+      return author.posts.map(post => {
+        return <Post key={post.id} post={post} />
+      });
+    }
+
+    return '';
+  }
   const handleChange = (event) => {
     setNewpost({ ...newpost, [event.target.name]: event.target.value });
   };
@@ -45,7 +55,7 @@ function AuthorsDetails(props) {
       .then((json) => {
         setAuthor(json);
       })
-      .catch(console.err);
+    console.log(author)
   }, [URL]);
   return author ? (
     <>
@@ -81,9 +91,11 @@ function AuthorsDetails(props) {
           <input type="submit" value="Create Post" />
         </div>
       </form>
+      {getPostsHTML()}
     </>
+
   ) : (
-    <p> LOADING... </p>
+    <LoadingPlaceholder />
   );
 }
 export default AuthorsDetails;

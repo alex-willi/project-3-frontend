@@ -6,7 +6,7 @@ import Authors from "./pages/Authors";
 import AboutUs from "./pages/Aboutus";
 import AuthorsDetails from "./components/AuthorsDetails";
 import Feed from "./pages/Feed";
-import Post from "./components/Post";
+import PostDetails from "./pages/PostDetails";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         <Route path="/feed" element={<Feed />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/authors/:id" element={<AuthorsDetails />} />
-        <Route path="/posts/:id" element={<Post />} />
+        <Route path="/posts/:id" element={<PostDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </div>
