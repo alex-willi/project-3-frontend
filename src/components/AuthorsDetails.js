@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+
 import LoadingPlaceholder from "./LoadingPlaceholder";
 import Post from "./Post";
 function AuthorsDetails(props) {
@@ -14,7 +16,15 @@ function AuthorsDetails(props) {
   const getPostsHTML = () => {
     if (author.posts) {
       return author.posts.map(post => {
-        return <Post key={post.id} post={post} />
+        return (
+          <Link
+          key={post.id}
+          className="postlink"
+          to={`/posts/${post._id}`}
+          >
+        <Post key={post.id} post={post} />
+        </Link>
+        )
       });
     }
 
