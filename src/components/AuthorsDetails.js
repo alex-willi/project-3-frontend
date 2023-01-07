@@ -7,11 +7,13 @@ import Post from "./Post";
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/authors/${id}`;
+  console.log(id)
   const [author, setAuthor] = useState([]);
   const [newpost, setNewpost] = useState({
     title: "",
     photo: "",
     body: "",
+    author: `${id}`
   });
   const getPostsHTML = () => {
     if (author.posts) {
