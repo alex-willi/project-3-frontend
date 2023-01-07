@@ -25,7 +25,7 @@ function Feed(props) {
     return (
       <>
         <h1 className="feedtitle"> Feed Page </h1>{" "}
-        <section className="all-feeds">
+        <section className="feedlist">
           {" "}
           {posts.map((post) => {
             return (
@@ -34,7 +34,7 @@ function Feed(props) {
                 className="postlink"
                 to={`/posts/${post._id}`}
               >
-                <Post key={post.id} post={post} />
+                <Post key={post.id} post={post} />{" "}
               </Link>
             );
           })}{" "}

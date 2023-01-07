@@ -13,10 +13,10 @@ function Comments() {
     setComment(e.target.value);
   };
   return (
-    <div className="div-container">
-      {comments.map((comment, index) => (
+    <div className="container">
+      {comments.map((text, index) => (
         <div key={index} className="comment-container">
-          {comment}
+          {text}
         </div>
       ))}
       <div className="comment-flexbox">
