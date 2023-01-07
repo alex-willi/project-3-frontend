@@ -1,10 +1,9 @@
-
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Feed.css"
-import Post from '../components/Post'
+import "../styles/Feed.css";
+import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
+import Comments from "../components/Comments";
 
 function Feed(props) {
   const [posts, setPosts] = useState([]);
@@ -26,25 +25,25 @@ function Feed(props) {
   if (posts) {
     return (
       <>
-        <h1 className="feedtitle">Feed Page</h1>
+        <h1 className="feedtitle"> Feed Page </h1>{" "}
         <section className="all-feeds">
-          {posts.map(post => {
+          {" "}
+          {posts.map((post) => {
             return (
               <Link
                 key={post.id}
                 className="postlink"
                 to={`/posts/${post._id}`}
               >
-
                 <Post key={post.id} post={post} />
               </Link>
-            )
-          })}
-        </section>
+            );
+          })}{" "}
+        </section>{" "}
       </>
     );
   }
 
-  return <LoadingPlaceholder />
+  return <LoadingPlaceholder />;
 }
 export default Feed;

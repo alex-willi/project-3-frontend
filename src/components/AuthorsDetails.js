@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import LoadingPlaceholder from "./LoadingPlaceholder";
 import Post from "./Post";
+
 function AuthorsDetails(props) {
   const { id } = useParams();
   const URL = `http://localhost:4000/authors/${id}`;
@@ -13,13 +14,13 @@ function AuthorsDetails(props) {
   });
   const getPostsHTML = () => {
     if (author.posts) {
-      return author.posts.map(post => {
-        return <Post key={post.id} post={post} />
+      return author.posts.map((post) => {
+        return <Post key={post.id} post={post} />;
       });
     }
 
-    return '';
-  }
+    return "";
+  };
   const handleChange = (event) => {
     setNewpost({ ...newpost, [event.target.name]: event.target.value });
   };
@@ -54,12 +55,12 @@ function AuthorsDetails(props) {
       .then((response) => response.json())
       .then((json) => {
         setAuthor(json);
-      })
-    console.log(author)
+      });
+    console.log(author);
   }, [URL]);
   return author ? (
     <>
-      <p className="authorname"> {author.name} </p>
+      <p className="authorname"> {author.name} </p>{" "}
       <form onSubmit={handleSubmit}>
         <div className="authorpost">
           <input
@@ -68,7 +69,7 @@ function AuthorsDetails(props) {
             placeholder="Title"
             value={newpost.title}
             onChange={handleChange}
-          />
+          />{" "}
           <input
             name="photo"
             id="image"
@@ -77,7 +78,7 @@ function AuthorsDetails(props) {
             placeholder="image"
             value={newpost.image}
             onChange={handleChange}
-          />
+          />{" "}
           <textarea
             name="body"
             cols="52"
@@ -87,13 +88,12 @@ function AuthorsDetails(props) {
             placeholder="body"
             value={newpost.body}
             onChange={handleChange}
-          ></textarea>
+          ></textarea>{" "}
           <input type="submit" value="Create Post" />
         </div>
       </form>
       {getPostsHTML()}
     </>
-
   ) : (
     <LoadingPlaceholder />
   );
