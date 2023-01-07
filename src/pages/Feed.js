@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/Feed.css";
 import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
-import Comments from "../components/Comments";
 
 function Feed(props) {
   const [posts, setPosts] = useState([]);
