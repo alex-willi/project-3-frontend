@@ -1,19 +1,21 @@
-import { useState } from "react"
-import "../styles/Comments.css"
+import { useState } from "react";
+import "../styles/Comments.css";
 function Comments() {
-  const [comment, setComment] = useState("")
-  const [comments, setComments] = useState([])
-
-  const onClickHandler = () => {
-    setComments((comments) => [...comments, comment])
-  }
+  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
+  const onClickHandler = (e) => {
+    e.preventDefault();
+    setComments((comments) => [...comments, comment]);
+  };
   const onChangeHandler = (e) => {
-    setComment(e.target.value)
-  }
+    setComment(e.target.value);
+  };
   return (
     <div className="container">
-      {comments.map((text) => (
-        <div className="comment-container">{text}</div>
+      {comments.map((text, index) => (
+        <div key={index} className="comment-container">
+          {text}
+        </div>
       ))}
       <div className="comment-flexbox">
         <h3 className="comment-text">Comment</h3>
@@ -22,13 +24,13 @@ function Comments() {
           onChange={onChangeHandler}
           className="input-box"
         />
-        <button onClick={onClickHandler}
-          className="comment-button">
-          Submit
-        </button>
+        <div>
+          <button onClick={onClickHandler} className="comment-button">
+            Submit
+          </button>
+        </div>
       </div>
     </div>
-  )
+  );
 }
-
-export default Comments
+export default Comments;

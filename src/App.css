@@ -78,3 +78,8 @@ input {
     justify-content: space-around;
     align-items: center;
 }
+
+.user-list {
+    display: flex;
+    justify-content: space-around;
+}
