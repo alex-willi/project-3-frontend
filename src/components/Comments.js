@@ -1,22 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Comments.css";
 function Comments() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  
   const onClickHandler = (e) => {
     e.preventDefault();
-    setComments((comments) => [...comments, comment]);
+    setComments((comments) => [...comments, {comment: comment}]);
   };
   const onChangeHandler = (e) => {
     setComment(e.target.value);
   };
+
+  useEffect(() => {
+    setComments([
+      {comment: 'this is a comment'},
+      {comment: 'this is a comment2'},
+      {comment: 'this is a comment3'},
+      {comment: 'this is a comment4'},
+      {comment: 'this is a comment5'},
+      {comment: 'this is a comment6'},
+      {comment: 'this is a comment7'},
+    ])
+  }, []);
+
   return (
     <div className="container">
-      {comments.map((text, index) => (
+      {comments.map((comment, index) => (
         <div key={index} className="comment-container">
-          {text}
+          {comment.comment}
         </div>
       ))}
+      
       <div className="comment-flexbox">
         <h3 className="comment-text">Comment</h3>
         <textarea
