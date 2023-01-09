@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Comments.css";
+
 function Comments() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
@@ -10,9 +11,11 @@ function Comments() {
   const onChangeHandler = (e) => {
     setComment(e.target.value);
   };
+
   useEffect(() => {
     setComments([{ comment: "this is a comment" }]);
   }, []);
+
   return (
     <div className="container">
       {comments.map((comment, index) => (
