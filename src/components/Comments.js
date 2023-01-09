@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import "../styles/Comments.css";
 
-function Comments() {
+function Comments(props) {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
   const onClickHandler = (e) => {
     e.preventDefault();
-    setComments((comments) => [...comments, { comment: comment }]);
+    props.addComment({
+      name: 'test-person',
+      comment: comment,
+      post: props.postId
+    })
+    setComment('')
   };
   const onChangeHandler = (e) => {
     setComment(e.target.value);
