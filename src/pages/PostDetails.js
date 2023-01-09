@@ -29,7 +29,8 @@ function PostDetails() {
   if (post) {
     return (
       <div>
-        <Post post={post} author={author} /> <Comments />
+        <Post post={post} author={author} />
+        <Comments />
       </div>
     );
   }
