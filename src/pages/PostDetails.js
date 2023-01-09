@@ -8,8 +8,7 @@ function PostDetails() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [author, setAuthor] = useState(null);
-  const [comments, setComments] = useState(null)
-
+  console.log(post);
   async function fetchPostData() {
     try {
       const response = await (
