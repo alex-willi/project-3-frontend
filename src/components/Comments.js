@@ -15,6 +15,7 @@ function Comments() {
 
   useEffect(() => {
     setComments([{ comment: "this is a comment" }]);
+    console.log(comment);
   }, []);
 
   return (
