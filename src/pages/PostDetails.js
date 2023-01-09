@@ -46,12 +46,13 @@ function PostDetails() {
   useEffect(() => {
     fetchPostData();
   }, []);
+  console.log(comments)
 
   if (post) {
     return (
       <div>
-        <Post post={post} author={author} />
-        <Comments addComment={addComment} postId={id} />
+        <Post post={post} author={author}  />
+        <Comments addComment={addComment} comments={comments} postId={id} />
       </div>
     );
   }
