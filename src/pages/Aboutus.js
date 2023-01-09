@@ -6,7 +6,7 @@ function AboutUs() {
       <div className="profile">
         <div className="cagdas">
           <div className="infolinks">
-            <h4 className="gitname"> Cagdas Kalsen </h4>{" "}
+            <h4 className="gitname"> Cagdas Kalsen </h4>
             <a
               href="https://github.com/CagdasKalsen"
               target="_blank"
@@ -17,7 +17,7 @@ function AboutUs() {
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                 alt="github"
               />
-            </a>{" "}
+            </a>
             <a
               href="https://www.linkedin.com/in/cagdaskalsensoftwareengineer/"
               target="_blank"
@@ -28,7 +28,7 @@ function AboutUs() {
                 src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                 alt="linkedin"
               />
-            </a>{" "}
+            </a>
           </div>
           <div className="Info">
             <p>
@@ -39,10 +39,10 @@ function AboutUs() {
               exercitationem ad reiciendis ex! Eos, laudantium?
             </p>
           </div>
-        </div>{" "}
+        </div>
         <div className="brandon">
           <div className="infolinks">
-            <h4 className="gitname"> Brandon Tobin </h4>{" "}
+            <h4 className="gitname"> Brandon Tobin </h4>
             <a
               href="https://github.com/BrandonTobin"
               target="_blank"
@@ -53,7 +53,7 @@ function AboutUs() {
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                 alt="github"
               />
-            </a>{" "}
+            </a>
             <a
               href="https://www.linkedin.com/in/brandontobinswe/"
               target="_blank"
@@ -64,23 +64,22 @@ function AboutUs() {
                 src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                 alt="linkedin"
               />
-            </a>{" "}
-          </div>{" "}
+            </a>
+          </div>
           <div className="Info">
             <p>
-              Thank you for visiting Sports Posts! My name is Brandon Tobin, a
-              25 year old marketer that turned to software engineering.
-              <br></br>
-              <br></br>I am an experienced Software Engineer adept in offering
-              cutting edge engineering solutions. Brining forth expertise in
-              managing all aspects of the software development cycle. Skilled in
-              problem solving and executing software tasks from start to finish.
+              Thank you for visiting Sports Posts! My name is Brandon Tobin, a 25 year old marketer that turned to software engineering.
+              <br>
+              </br>
+              <br>
+              </br>
+              I am an experienced Software Engineer adept in offering cutting edge engineering solutions. Brining forth expertise in managing all aspects of the software development cycle. Skilled in problem solving and executing software tasks from start to finish.
             </p>
           </div>
         </div>
         <div className="alex">
           <div className="infolinks">
-            <h4 className="gitname"> Alex Williams </h4>{" "}
+            <h4 className="gitname"> Alex Williams </h4>
             <a
               href="https://github.com/alex-willi"
               target="_blank"
@@ -91,7 +90,7 @@ function AboutUs() {
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                 alt="github"
               />
-            </a>{" "}
+            </a>
             <a
               href="https://www.linkedin.com/in/alex-willi/"
               target="_blank"
