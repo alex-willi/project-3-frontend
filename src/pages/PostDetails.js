@@ -8,7 +8,8 @@ function PostDetails() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [author, setAuthor] = useState(null);
-  console.log(post);
+  const [comments, setComments] = useState(null)
+
   async function fetchPostData() {
     try {
       const response = await (
@@ -17,6 +18,26 @@ function PostDetails() {
 
       setPost(response.post);
       setAuthor(response.author);
+      setComments(response.comments)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function addComment(data) {
+    console.log(data);
+    try {
+      const response = await (
+        await fetch(`http://localhost:4000/comments/`, {
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+      ).json();
+      console.log(response);
+      setComments([...comments, response])
     } catch (err) {
       console.log(err);
     }
@@ -30,7 +51,7 @@ function PostDetails() {
     return (
       <div>
         <Post post={post} author={author} />
-        <Comments />
+        <Comments addComment={addComment} postId={id} />
       </div>
     );
   }
