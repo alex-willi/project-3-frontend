@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(231, 231, 231);
 }
 
 .nav {
@@ -17,6 +17,7 @@ body {
 #home,
 #authors,
 #aboutus,
+#feed,
 .authorslink {
     text-decoration: none;
 }
@@ -27,7 +28,7 @@ body {
 
 .profile {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 30px;
 }
 
@@ -55,25 +56,22 @@ input {
 }
 
 .cagdas {
+    background-color: rgb(231, 231, 231);
+    height: auto;
     padding: 40px;
     width: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .brandon {
     padding: 40px;
     width: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: auto;
+    background-color: rgb(231, 231, 231);
 }
 
 .alex {
+    background-color: rgb(231, 231, 231);
+    height: auto;
     padding: 40px;
     width: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
