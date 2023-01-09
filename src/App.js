@@ -11,7 +11,7 @@ import Comments from "./components/Comments";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <nav className="nav">
         <Link id="home" to="/">
           <div> Home </div>
@@ -35,7 +35,7 @@ function App() {
         <Route path="/posts/:id" element={<Comments />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

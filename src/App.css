@@ -28,7 +28,7 @@ body {
 
 .profile {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 30px;
 }
 
@@ -56,6 +56,8 @@ input {
 }
 
 .cagdas {
+    background-color: bisque;
+    height: auto;
     padding: 40px;
     width: 200px;
     display: flex;
@@ -82,4 +84,33 @@ input {
 .user-list {
     display: flex;
     justify-content: space-around;
+}
+
+#allposts {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#postlink {
+    display: flex;
+    flex-direction: wrap;
+}
+
+#feedlist {
+    display: flex;
+    flex-direction: wrap;
+}
+
+#root {
+    /* background-color: black; */
+    height: 100px;
+}
+
+#infolinks {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
 }
