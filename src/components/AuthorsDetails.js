@@ -21,7 +21,7 @@ function AuthorsDetails(props) {
       return author.posts.map((post) => {
         return (
           <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
-            <Post key={post.id} post={post} />
+            <Post key={post.id} post={post} />{" "}
           </Link>
         );
       });
@@ -98,9 +98,9 @@ function AuthorsDetails(props) {
             onChange={handleChange}
           ></textarea>{" "}
           <input type="submit" value="Create Post" />
-        </div>
-      </form>
-      {getPostsHTML()}
+        </div>{" "}
+      </form>{" "}
+      {getPostsHTML()}{" "}
     </>
   ) : (
     <LoadingPlaceholder />

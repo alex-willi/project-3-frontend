@@ -56,7 +56,6 @@ input {
 }
 
 .cagdas {
-    background-color: bisque;
     height: auto;
     padding: 40px;
     width: 200px;
@@ -66,11 +65,9 @@ input {
     padding: 40px;
     width: 200px;
     height: auto;
-    background-color: bisque;
 }
 
 .alex {
-    background-color: bisque;
     height: auto;
     padding: 40px;
     width: 200px;

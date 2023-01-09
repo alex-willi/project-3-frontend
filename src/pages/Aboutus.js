@@ -68,11 +68,13 @@ function AboutUs() {
           </div>{" "}
           <div className="Info">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos natus
-              animi voluptates suscipit aperiam rerum officiis, dolores at illo
-              beatae. Ad ullam, omnis dignissimos explicabo tempore doloremque.
-              Distinctio fugit minima ducimus voluptatem magni quia
-              exercitationem ad reiciendis ex! Eos, laudantium?
+              Thank you for visiting Sports Posts! My name is Brandon Tobin, a
+              25 year old marketer that turned to software engineering.
+              <br></br>
+              <br></br>I am an experienced Software Engineer adept in offering
+              cutting edge engineering solutions. Brining forth expertise in
+              managing all aspects of the software development cycle. Skilled in
+              problem solving and executing software tasks from start to finish.
             </p>
           </div>
         </div>

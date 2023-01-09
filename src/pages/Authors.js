@@ -9,15 +9,15 @@ function Authors(props) {
       return (
         <div key={index} className="authors">
           <Link className="authorslink" to={`/authors/${author._id}`}>
-            <h1>{author.name}</h1>
-          </Link>
+            <h1>{author.name} </h1>{" "}
+          </Link>{" "}
         </div>
       );
     });
   };
   const loading = () => (
     <section className="user-list">
-      <h1>Loading...</h1>
+      <h1> Loading... </h1>{" "}
     </section>
   );
   async function fetchUser() {
@@ -36,7 +36,8 @@ function Authors(props) {
 
   return (
     <section className="user-list">
-      {authors && authors.length ? loaded() : loading()}
+      {" "}
+      {authors && authors.length ? loaded() : loading()}{" "}
     </section>
   );
 }
