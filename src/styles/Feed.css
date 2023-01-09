@@ -17,6 +17,8 @@
 .feed-image {
     height: 250px;
     width: auto;
+    display: flex;
+    justify-items: center;
 }
 
 .feedlist,
@@ -39,8 +41,7 @@
     cursor: pointer;
 }
 
-
-/* .user-list {
+.user-list {
     display: flex;
     justify-content: space-around;
-} */
+}
