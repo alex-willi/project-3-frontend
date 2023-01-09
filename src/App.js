@@ -7,10 +7,11 @@ import AboutUs from "./pages/Aboutus";
 import AuthorsDetails from "./components/AuthorsDetails";
 import Feed from "./pages/Feed";
 import PostDetails from "./pages/PostDetails";
+import Comments from "./components/Comments";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <nav className="nav">
         <Link id="home" to="/">
           <div> Home </div>
@@ -31,9 +32,10 @@ function App() {
         <Route path="/authors" element={<Authors />} />
         <Route path="/authors/:id" element={<AuthorsDetails />} />
         <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/posts/:id" element={<Comments />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
