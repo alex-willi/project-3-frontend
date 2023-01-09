@@ -15,11 +15,9 @@ function Feed(props) {
     }
   }
   const BASE_URL = `http://localhost:4000/posts`;
-
   useEffect(() => {
     fetchPosts();
   }, []);
-
   if (posts) {
     return (
       <>
@@ -40,7 +38,6 @@ function Feed(props) {
       </>
     );
   }
-
   return <LoadingPlaceholder />;
 }
 export default Feed;
