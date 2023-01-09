@@ -29,7 +29,7 @@ function PostDetails() {
     try {
       const response = await (
         await fetch(`http://localhost:4000/comments/`, {
-          method: 'post',
+          method: 'POST',
           headers: {
             'content-type': 'application/json'
           },
