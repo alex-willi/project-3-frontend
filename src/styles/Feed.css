@@ -7,6 +7,8 @@
 .feed-image {
     height: 250px;
     width: auto;
+    display: flex;
+    justify-items: center;
 }
 
 .feedlist,
