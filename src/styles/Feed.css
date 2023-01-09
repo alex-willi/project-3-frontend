@@ -14,28 +14,39 @@
     font-size: 60px;
 }
 
+#allposts {}
+
+.post-title {
+    text-align: center;
+    text-decoration: none;
+}
+
 .feed-image {
     height: 250px;
     width: auto;
-    display: flex;
-    justify-items: center;
+    /* display: flex; */
+}
+
+.postlink {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .feedlist,
 .postlink {
-    /* width: 70vw; */
+    /* width: auto; */
     /* height: auto; */
     display: flex;
     flex-wrap: wrap;
-    place-items: center;
+    /* justify-content: center; */
     /* border-radius: 15px; */
     /* width: 300px;
     height: 400px; */
     margin: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
-.feedlist:hover {
+.postlink:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in;
     cursor: pointer;

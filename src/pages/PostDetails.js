@@ -8,7 +8,7 @@ function PostDetails() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [author, setAuthor] = useState(null);
-
+  console.log(post);
   async function fetchPostData() {
     try {
       const response = await (
@@ -29,7 +29,8 @@ function PostDetails() {
   if (post) {
     return (
       <div>
-        <Post post={post} author={author} /> <Comments />
+        <Post post={post} author={author} />
+        <Comments />
       </div>
     );
   }
