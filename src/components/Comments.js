@@ -4,6 +4,7 @@ import "../styles/Comments.css";
 function Comments() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+
   const onClickHandler = (e) => {
     e.preventDefault();
     setComments((comments) => [...comments, { comment: comment }]);

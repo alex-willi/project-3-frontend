@@ -1,3 +1,5 @@
+
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -66,7 +68,6 @@ function AuthorsDetails(props) {
       });
     console.log(author);
   }, [URL]);
-
   return author ? (
     <>
       <p className="authorname"> {author.name} </p>{" "}
