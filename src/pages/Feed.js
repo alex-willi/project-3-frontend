@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/Feed.css";
 import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
-
 function Feed(props) {
   const [posts, setPosts] = useState([]);
   async function fetchPosts() {
@@ -24,9 +23,8 @@ function Feed(props) {
   if (posts) {
     return (
       <>
-        <h1 className="feedtitle"> Feed Page </h1>{" "}
+        <h1 className="feedtitle"> Feed Page </h1>
         <div className="feedlist">
-          {" "}
           {posts.map((post) => {
             return (
               <Link
@@ -34,11 +32,11 @@ function Feed(props) {
                 className="postlink"
                 to={`/posts/${post._id}`}
               >
-                <Post key={post.id} post={post} />{" "}
+                <Post key={post.id} post={post} />
               </Link>
             );
-          })}{" "}
-        </div>{" "}
+          })}
+        </div>
       </>
     );
   }
