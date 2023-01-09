@@ -14,9 +14,7 @@ function Comments() {
   };
 
   useEffect(() => {
-    setComments([
-      { comment: 'this is a comment' }
-    ])
+    setComments([{ comment: "this is a comment" }]);
   }, []);
 
   return (
