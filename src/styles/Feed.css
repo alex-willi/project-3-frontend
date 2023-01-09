@@ -29,8 +29,7 @@
     cursor: pointer;
 }
 
-
-/* .user-list {
+.user-list {
     display: flex;
     justify-content: space-around;
-} */
+}
