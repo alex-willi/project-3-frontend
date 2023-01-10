@@ -14,6 +14,7 @@ function Comments(props) {
       post: props.postId
     })
     setComment('')
+    setComments([...comments, { comment }])
   };
   const onChangeHandler = (e) => {
     setComment(e.target.value);
@@ -22,7 +23,7 @@ function Comments(props) {
   useEffect(() => {
     setComments(props.comments);
   }, []);
-  console.log(comments);
+  console.log(comment);
 
   return (
     <div className="container">
