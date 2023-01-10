@@ -16,6 +16,12 @@ function Post(props) {
       </>
     );
   }
+  
 }
 
+<<<<<<< HEAD
 export default Post;
+=======
+
+export default Post;
+>>>>>>> main
