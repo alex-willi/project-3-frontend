@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import AuthorPost from "./AuthorPost";
 
 import LoadingPlaceholder from "./LoadingPlaceholder";
-import Post from "./Post";
 
 function AuthorsDetails(props) {
   const { id } = useParams();
-  const URL = `http://localhost:4000/authors/${id}`;
+  const URL = `https://project-3-sports.herokuapp.com/authors/${id}`;
   const [author, setAuthor] = useState(null);
   const [newpost, setNewpost] = useState({
     title: "",
@@ -16,15 +16,35 @@ function AuthorsDetails(props) {
     author: id,
   });
 
-  const getPostsHTML = () => {
-    if (author.posts) {
-      return author.posts.map((post) => (
-        <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
-          <Post key={post.id} post={post} />
-        </Link>
-      ));
+const getPostsHTML = () => {
+  if (author.posts) {
+    return author.posts.map((post) => (
+      <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
+        <AuthorPost key={post.id} post={post} onDelete={handleDelete} />
+      </Link>
+    ));
+  }
+  return "";
+};
+
+const handleDelete = async (id) => {
+    try {
+      const requestOptions = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+          },
+      };
+      const response = await fetch(
+        `https://project-3-sports.herokuapp.com/posts/${id}`,
+        requestOptions
+      );
+      console.log(response);
+      const deletedPost = await response.json();
+      console.log(deletedPost)
+    } catch (err) {
+      console.log(err);
     }
-    return "";
   };
 
   const handleChange = (event) => {
@@ -43,7 +63,7 @@ function AuthorsDetails(props) {
         body: JSON.stringify(post),
       };
       const response = await fetch(
-        `http://localhost:4000/posts`,
+        `https://project-3-sports.herokuapp.com/posts`,
         requestOptions
       );
       const comments = await response.json();
