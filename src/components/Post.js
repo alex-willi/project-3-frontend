@@ -3,9 +3,9 @@ import "../styles/Feed.css";
 function Post(props) {
   if (props.post) {
     return (
-      <div id="allposts">
-        <h1 className="post-title">{props.post.title}</h1>
-        <img className="feed-image" src={props.post.photo} alt="sports"></img>
+      <div id="all-posts">
+        <h1 className="posttitle">{props.post.title}</h1>
+        <img className="feedimage" src={props.post.photo} alt="sports"></img>
         {/* <h1>{props.author.name}</h1> */}
         <h1>{props.post.body}</h1>
         {props.author ? (
@@ -16,7 +16,7 @@ function Post(props) {
       </div>
     );
   }
-  
+
 }
 
 

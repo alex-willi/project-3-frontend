@@ -1,74 +1,79 @@
 .container {
-  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.comment-flexbox {
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-}
-
-.comment-text {
-  margin: 12px 0;
-  font-size: 1.15rem;
-  font-weight: 600;
-}
-
-.input-box {
-  height: 75px;
-  width: 465px;
-  background-color: #ffffff;
-}
-
-.comment-button {
-  height: 40px;
-  width: 80px;
-  background-color: black;
-  color: white;
-  font-size: 1.05rem;
-  margin-top: 10px;
-  border-radius: 5px;
-  border-style: none;
-  cursor: pointer;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px 0;
 }
 
 .comment-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  height: 75px;
-  width: 465px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.feedtitle {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 60px;
+.comment-flexbox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.comment-text {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.comment-button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-button:hover {
+  background-color: black;
+}
+
+.post-title {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .feed-image {
-  height: 250px;
-  width: auto;
-}
-
-.feedlist,
-.postlink {
-  width: 70vw;
+  width: 500px;
   height: auto;
   display: flex;
-  flex-direction: column;
-  place-items: center;
-  border-radius: 15px;
-  width: 300px;
-  height: 400px;
-  margin: 20px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+}
+
+.post-body {
+  font-size: 18px;
+  margin: 16px 0;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+.author-name {
+  font-size: 18px;
+  font-style: italic;
 }
