@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import brandon from "../assets/brandontobin.jpeg";
-// import alex from "../assets/alexwilliams.jpeg";
-// import cagdas from "../assets/cagdaskalsen.jpeg";
+import brandon from "../assets/brandontobin.jpeg";
+import alex from "../assets/alexwilliams.jpeg";
+import cagdas from "../assets/cagdaskalsen.jpeg";
 
 function Authors(props) {
   const [authors, setAuthors] = useState(null);
@@ -40,9 +40,9 @@ function Authors(props) {
   return (
     <section className="user-list">
       {authors && authors.length ? loaded() : loading()}
-      {/* <img className="alex-image" src={alex} />
+      <img className="alex-image" src={alex} />
       <img className="cagdas-image" src={cagdas} />
-      <img className="brandon-image" src={brandon} /> */}
+      <img className="brandon-image" src={brandon} />
     </section>
   );
 }
