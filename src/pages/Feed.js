@@ -24,7 +24,7 @@ function Feed(props) {
     return (
       <>
         <h1 className="feedtitle"> Feed Page </h1>
-        <div className="feedlist">
+        <div className="feeds-flex">
           {posts.map((post) => {
             return (
               <Link
@@ -32,7 +32,7 @@ function Feed(props) {
                 className="postlink"
                 to={`/posts/${post._id}`}
               >
-                <Post key={post.id} post={post} />
+                <Post className="posts" key={post.id} post={post} />
               </Link>
             );
           })}

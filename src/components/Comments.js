@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 import "../styles/Comments.css";
 
 function Comments(props) {
-  console.log(props)
+  console.log(props);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
   const onClickHandler = (e) => {
     e.preventDefault();
     props.addComment({
-      name: 'test-person',
+      name: "test-person",
       comment: comment,
-      post: props.postId
-    })
-    setComment('')
+      post: props.postId,
+    });
+    setComment("");
+    setComments([...comments, { comment }]);
   };
   const onChangeHandler = (e) => {
     setComment(e.target.value);
@@ -32,7 +33,7 @@ function Comments(props) {
         </div>
       ))}
       <div className="comment-flexbox">
-        <h3 className="comment-text">Comment</h3>
+        <h3 className="comment-text"> Comment </h3>
         <textarea
           value={comment}
           onChange={onChangeHandler}
