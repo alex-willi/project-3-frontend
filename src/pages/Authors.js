@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Authors(props) {
   const [authors, setAuthors] = useState(null);
-  const BASE_URL = "http://localhost:4000/";
+  const BASE_URL = "https://project-3-sports.herokuapp.com/";
   const loaded = () => {
     return authors.map((author, index) => {
       return (

@@ -14,7 +14,7 @@ function Feed(props) {
       console.log(err);
     }
   }
-  const BASE_URL = `http://localhost:4000/posts`;
+  const BASE_URL = `https://project-3-sports.herokuapp.com/posts`;
 
   useEffect(() => {
     fetchPosts();

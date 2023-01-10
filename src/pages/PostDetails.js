@@ -28,7 +28,7 @@ function PostDetails() {
     console.log(data);
     try {
       const response = await (
-        await fetch(`http://localhost:4000/comments/`, {
+        await fetch(`https://project-3-sports.herokuapp.com/comments/`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

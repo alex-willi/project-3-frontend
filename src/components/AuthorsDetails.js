@@ -43,7 +43,7 @@ function AuthorsDetails(props) {
         body: JSON.stringify(post),
       };
       const response = await fetch(
-        `http://localhost:4000/posts`,
+        `https://project-3-sports.herokuapp.com/posts`,
         requestOptions
       );
       const comments = await response.json();
