@@ -9,6 +9,12 @@ function PostDetails() {
   const [post, setPost] = useState(null);
   const [author, setAuthor] = useState(null);
   const [comments, setComments] = useState(null)
+  const [editForm, setEditForm] = useState({
+    name: "",
+    image: "",
+    title: "",
+    post:id
+})
 
   async function fetchPostData() {
     try {
@@ -42,6 +48,34 @@ function PostDetails() {
       console.log(err);
     }
   }
+  const handleFormChange = (e) => {
+    // console.log(editForm)
+    const userInput = { ...editForm }
+    userInput[e.target.name] = e.target.value
+    setEditForm(userInput)
+}
+  const handleForm = async (e, postId) => {
+    console.log(postId)
+    e.preventDefault()
+    const currentState = {...editForm }
+    console.log(currentState)
+    try {
+        const requestOptions = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(currentState)
+        }
+        const response = await fetch(`https://project-3-sports.herokuapp.com/posts/${id}`, requestOptions)
+        console.log(response)
+        const updatedPost = await response.json()
+        setEditForm(updatedPost)
+        console.log(postId)
+    } catch (err) {
+        console.log(err)
+    }
+}
 
   useEffect(() => {
     fetchPostData();
@@ -51,6 +85,50 @@ function PostDetails() {
   if (post) {
     return (
       <div>
+        <form onSubmit={(e)=>editForm(e, post._id)}>
+         <input type="submit" value="Edit post" />
+                    <div>
+                        <label htmlFor='name'>
+                            Title
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="enter a posts title"
+                                // value={stitle}
+                                onChange={handleFormChange}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor='image'>
+                            Image
+                            <input
+                                type="text"
+                                id="photo"
+                                name="photo"
+                                placeholder="enter a url image"
+                                // value={editPost.photo}
+                                onChange={handleFormChange}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor='title'>
+                            Body
+                            <input
+                                type="text"
+                                id="body"
+                                name="body"
+                                placeholder="enter the body of the post"
+                                // value={editPost.body}
+                                onChange={handleFormChange}
+                            />
+                        </label>
+                        <br />
+                       
+                    </div>
+                </form>
         <Post post={post} author={author}  />
         <Comments addComment={addComment} comments={comments} postId={id} />
       </div>
