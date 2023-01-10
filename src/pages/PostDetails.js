@@ -13,7 +13,7 @@ function PostDetails() {
   async function fetchPostData() {
     try {
       const response = await (
-        await fetch(`http://localhost:4000/posts/${id}`)
+        await fetch(`https://project-3-sports.herokuapp.com/posts/${id}`)
       ).json();
 
       setPost(response.post);
