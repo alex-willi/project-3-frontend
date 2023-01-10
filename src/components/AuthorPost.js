@@ -5,6 +5,49 @@ function AuthorPost(props) {
   if (props.post) {
     return (
       <div id="allposts">
+         <form onSubmit={props.onDelete}>
+                    <div>
+                        <label htmlFor='name'>
+                            Title
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="enter a posts title"
+                                // value={editForm.name}
+                                // onChange={handleChange}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor='image'>
+                            Image
+                            <input
+                                type="text"
+                                id="image"
+                                name="image"
+                                placeholder="enter a url image"
+                                // value={editForm.image}
+                                // onChange={handleChange}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor='title'>
+                            Body
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="enter the body of the post"
+                                // value={editForm.title}
+                                // onChange={handleChange}
+                            />
+                        </label>
+                        <br />
+                        <input type="submit" value="Edit post" />
+                    </div>
+                </form>
         <h1 className="post-title">
           {props.post.title}
           <span>

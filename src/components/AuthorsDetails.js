@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import AuthorPost from "./AuthorPost";
 
 import LoadingPlaceholder from "./LoadingPlaceholder";
-import Post from "./Post";
 
 function AuthorsDetails(props) {
   const { id } = useParams();
