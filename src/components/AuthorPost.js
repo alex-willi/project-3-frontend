@@ -1,14 +1,15 @@
 import React from "react";
 import "../styles/Feed.css";
-
-function AuthorPost(props) {
+import { Link } from "react-router-dom";
+function AuthorPost(props, post) {
+  // console.log(props)
   if (props.post) {
     return (
       <div id="allposts">
         <form onSubmit={props.onDelete}>
           <div className="edit">
             <label htmlFor="name">
-              Title
+              Title{" "}
               <input
                 type="text"
                 id="name"
@@ -18,10 +19,9 @@ function AuthorPost(props) {
                 // onChange={handleChange}
               />
             </label>
-
             <div>
               <label htmlFor="image">
-                Image
+                Image{" "}
                 <input
                   type="text"
                   id="image"
@@ -30,11 +30,11 @@ function AuthorPost(props) {
                   // value={editForm.image}
                   // onChange={handleChange}
                 />
-              </label>
-            </div>
+              </label>{" "}
+            </div>{" "}
             <div>
               <label htmlFor="title">
-                Body
+                Body{" "}
                 <input
                   type="text"
                   id="title"
@@ -43,32 +43,33 @@ function AuthorPost(props) {
                   // value={editForm.title}
                   // onChange={handleChange}
                 />
-                <br></br>
-                <input type="submit" value="Edit post" />
-              </label>
+                <br> </br> <input type="submit" value="Edit post" />
+              </label>{" "}
             </div>
-
             <br />
-          </div>
+          </div>{" "}
           <br />
           <div className="delete">
             <span>
+              {" "}
               {props.onDelete && (
                 <button onClick={() => props.onDelete(props.post._id)}>
-                  Delete Post
+                  Delete Post{" "}
                 </button>
-              )}
-            </span>
-          </div>
-        </form>
-        <h1 className="post-title">{props.post.title}</h1>
-        <img className="feed-image" src={props.post.photo} alt="sports"></img>
-        <h1 className="post-body">{props.post.body}</h1>
+              )}{" "}
+            </span>{" "}
+          </div>{" "}
+        </form>{" "}
+        <h1 className="post-title"> {props.post.title} </h1>{" "}
+        <img className="feed-image" src={props.post.photo} alt="sports">
+          {" "}
+        </img>{" "}
+        <h1 className="post-body"> {props.post.body} </h1>{" "}
         {props.author ? (
-          <h1 className="author-name">Author: {props.author.name}</h1>
+          <h1 className="author-name"> Author: {props.author.name} </h1>
         ) : (
           ""
-        )}
+        )}{" "}
       </div>
     );
   }
