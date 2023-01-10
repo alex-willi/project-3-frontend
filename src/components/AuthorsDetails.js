@@ -15,13 +15,19 @@ function AuthorsDetails(props) {
     body: "",
     author: id,
   });
+  const [editForm, setEditForm] = useState({
+    name: "",
+    image: "",
+    title: "",
+})
+
 
 const getPostsHTML = () => {
   if (author.posts) {
     return author.posts.map((post) => (
-      <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
-        <AuthorPost key={post.id} post={post} onDelete={handleDelete} />
-      </Link>
+      
+        <AuthorPost key={post.id} post={post} onDelete={handleDelete} update={handleForm} editForm={editForm}/>
+      
     ));
   }
   return "";
@@ -74,10 +80,16 @@ const handleDelete = async (id) => {
         body: "",
         author: id,
       });
+      setEditForm(comments)
     } catch (err) {
       console.log(err);
     }
   };
+  const handleForm = (e) => {
+    const userInput = { ...editForm }
+    userInput[e.target.name] = e.target.value
+    setEditForm(userInput)
+}
 
   useEffect(() => {
     fetch(URL)

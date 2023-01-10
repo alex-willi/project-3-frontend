@@ -1,21 +1,23 @@
 import React from "react";
 import "../styles/Feed.css";
-
-function AuthorPost(props) {
+import { Link } from "react-router-dom";
+function AuthorPost(props, post) {
+  console.log(props)
   if (props.post) {
     return (
-      <div id="allposts">
-         <form onSubmit={props.onDelete}>
+      <div>
+      <form onSubmit={props.update}>
+         <input type="submit" value="Edit post" />
                     <div>
                         <label htmlFor='name'>
                             Title
                             <input
                                 type="text"
-                                id="name"
-                                name="name"
+                                id="title"
+                                name="title"
                                 placeholder="enter a posts title"
-                                // value={editForm.name}
-                                // onChange={handleChange}
+                                value={props.editForm.title}
+                                onChange={props.update}
                             />
                         </label>
                     </div>
@@ -24,8 +26,8 @@ function AuthorPost(props) {
                             Image
                             <input
                                 type="text"
-                                id="image"
-                                name="image"
+                                id="photo"
+                                name="photo"
                                 placeholder="enter a url image"
                                 // value={editForm.image}
                                 // onChange={handleChange}
@@ -37,17 +39,19 @@ function AuthorPost(props) {
                             Body
                             <input
                                 type="text"
-                                id="title"
-                                name="title"
+                                id="body"
+                                name="body"
                                 placeholder="enter the body of the post"
                                 // value={editForm.title}
                                 // onChange={handleChange}
                             />
                         </label>
                         <br />
-                        <input type="submit" value="Edit post" />
+                       
                     </div>
                 </form>
+            <div id="allposts">
+                <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
         <h1 className="post-title">
           {props.post.title}
           <span>
@@ -58,11 +62,13 @@ function AuthorPost(props) {
         </h1>
         <img className="feed-image" src={props.post.photo} alt="sports"></img>
         <h1>{props.post.body}</h1>
+        </Link>
         {props.author ? (
           <h1 className="author-name">Author: {props.author.name}</h1>
         ) : (
           ""
         )}
+      </div>
       </div>
     );
   }
