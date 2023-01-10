@@ -7,7 +7,7 @@ import Post from "./Post";
 
 function AuthorsDetails(props) {
   const { id } = useParams();
-  const URL = `http://localhost:4000/authors/${id}`;
+  const URL = `https://project-3-sports.herokuapp.com/authors/${id}`;
   const [author, setAuthor] = useState(null);
   const [newpost, setNewpost] = useState({
     title: "",
