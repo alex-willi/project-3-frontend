@@ -11,17 +11,10 @@ function Comments(props) {
     props.addComment({
       name: "test-person",
       comment: comment,
-<<<<<<< HEAD
       post: props.postId,
     });
     setComment("");
     setComments([...comments, { comment }]);
-=======
-      post: props.postId
-    })
-    setComment('')
-    setComments([...comments, { comment }])
->>>>>>> main
   };
   const onChangeHandler = (e) => {
     setComment(e.target.value);

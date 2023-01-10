@@ -27,6 +27,13 @@
     color: black;
 }
 
+#home,
+#feed,
+#authors,
+#aboutus {
+    color: black;
+}
+
 
 /* .feed-image {
     height: auto;
@@ -77,11 +84,19 @@
 
 img.feed-image {
     width: auto;
-    height: 170px;
+    height: 160px;
+    margin: auto;
 }
 
 a.postlink {
+    margin: 40px;
+    width: 300px;
+    height: fit-content;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid gray;
 }
 
 #feedsdetails {
@@ -100,3 +115,43 @@ div.container {
     display: flex;
     flex-wrap: wrap;
 }
+
+#post-body {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: black;
+}
+
+#input {
+    color: black;
+}
+
+#allposts {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* #user-list,
+#pics {
+    display: flex;
+    align-items: center;
+}
+
+#authorsinfo {}
+
+#pic-alex,
+#pic-brandon,
+#pic-cagdas {
+    margin-top: -100px;
+    margin-left: 130px;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+} */
