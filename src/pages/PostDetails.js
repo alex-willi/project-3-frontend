@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
 import Comments from "../components/Comments";
+import AuthorPost from "../components/AuthorPost";
 
 function PostDetails() {
   const { id } = useParams();
@@ -60,21 +61,20 @@ function PostDetails() {
     const currentState = {...editForm }
     console.log(currentState)
     try {
-        const requestOptions = {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(currentState)
-        }
-        const response = await fetch(`https://project-3-sports.herokuapp.com/posts/${id}`, requestOptions)
-        console.log(response)
-        const updatedPost = await response.json()
-        setEditForm(updatedPost)
-        console.log(postId)
-    } catch (err) {
-        console.log(err)
-    }
+      const requestOptions = {
+          method: "PUT",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(currentState)
+      }
+      const response = await fetch(`https://project-3-sports.herokuapp.com/posts/${id}`, requestOptions)
+      const updatedPost = await response.json()
+      setEditForm(updatedPost)
+      fetchPostData();
+  } catch (err) {
+      console.log(err)
+  }
 }
 
   useEffect(() => {
@@ -85,7 +85,7 @@ function PostDetails() {
   if (post) {
     return (
       <div>
-        <form onSubmit={(e)=>editForm(e, post._id)}>
+        <form onSubmit={(e)=>handleForm(e, post._id)}>
          <input type="submit" value="Edit post" />
                     <div>
                         <label htmlFor='name'>
@@ -95,7 +95,7 @@ function PostDetails() {
                                 id="title"
                                 name="title"
                                 placeholder="enter a posts title"
-                                // value={stitle}
+                                value={editForm.title}
                                 onChange={handleFormChange}
                             />
                         </label>
@@ -108,7 +108,7 @@ function PostDetails() {
                                 id="photo"
                                 name="photo"
                                 placeholder="enter a url image"
-                                // value={editPost.photo}
+                                value={editForm.photo}
                                 onChange={handleFormChange}
                             />
                         </label>
@@ -121,7 +121,7 @@ function PostDetails() {
                                 id="body"
                                 name="body"
                                 placeholder="enter the body of the post"
-                                // value={editPost.body}
+                                value={editForm.body}
                                 onChange={handleFormChange}
                             />
                         </label>
@@ -129,7 +129,7 @@ function PostDetails() {
                        
                     </div>
                 </form>
-        <Post post={post} author={author}  />
+        <AuthorPost post={post} author={author}  />
         <Comments addComment={addComment} comments={comments} postId={id} />
       </div>
     );
