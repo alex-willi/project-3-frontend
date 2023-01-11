@@ -8,10 +8,10 @@ function Post(props) {
         <h1 className="post-title">{props.post.title}</h1>
         <img className="feed-image" src={props.post.photo} alt="sports"></img>
         {props.author ? (
-          <h1 className="author-name"> Author: {props.author.name} </h1>
+          <h1 id="post-body"> Author: {props.author.name} </h1>
         ) : (
           ""
-        )}{" "}
+        )}
       </div>
     );
   }
