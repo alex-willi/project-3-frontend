@@ -22,7 +22,7 @@ function AuthorPost(props) {
           <img className="feed-image" src={post.photo} alt="sports"></img>
           <h1>{post.body}</h1>
         </Link>
-        {/* check if author prop is present and render the author name */}
+
         {props.author ? (
           <h1 className="author-name">Author: {props.author.name}</h1>
         ) : (

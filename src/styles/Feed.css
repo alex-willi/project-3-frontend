@@ -155,3 +155,34 @@ div.container {
     display: flex;
     flex-wrap: wrap;
 } */
+
+.alex-image,
+.cagdas-image,
+.brandon-image {
+    border-style: solid;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 225px;
+    margin-top: 25px;
+}
+
+#authorsname {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#authorname {
+    padding: 20px;
+}
+
+
+/* .user-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 200px;
+    grid-gap: 20px;
+} */
