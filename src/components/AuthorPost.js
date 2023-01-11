@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 function AuthorPost(props) {
   const { post } = props;
+  const { author } = props;
+
   if (post) {
     return (
       <>
@@ -15,16 +17,12 @@ function AuthorPost(props) {
           )}
         </Link>
         <div id="allposts">
+          <h1>{author}</h1>
           <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
             <h1 className="post-title">{post.title}</h1>
             <img className="feed-image" src={post.photo} alt="sports"></img>
             <h1>{post.body}</h1>
           </Link>
-          {props.author ? (
-            <h1 className="author-name">Author: {props.author.name}</h1>
-          ) : (
-            ""
-          )}
         </div>
       </>
     );

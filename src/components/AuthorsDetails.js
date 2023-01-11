@@ -18,7 +18,12 @@ function AuthorsDetails() {
   const getPostsHTML = () => {
     if (author.posts) {
       return author.posts.map((post) => (
-        <AuthorPost key={post.id} post={post} onDelete={handleDelete} />
+        <AuthorPost
+          key={post.id}
+          post={post}
+          author={author.author.name}
+          onDelete={handleDelete}
+        />
       ));
     }
     return "";
@@ -80,6 +85,7 @@ function AuthorsDetails() {
         setAuthor(json);
       });
   }, [URL]);
+
   return author ? (
     <>
       <p className="authorname"> {author.name} </p>
