@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../styles/Feed.css";
 // import brandon from "../assets/brandontobin.jpeg";
 // import alex from "../assets/alexwilliams.jpeg";
 // import cagdas from "../assets/cagdaskalsen.jpeg";
