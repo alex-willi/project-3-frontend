@@ -14,10 +14,10 @@ function Post(props) {
         <img className="feed-image" src={props.post.photo} alt="sports"></img>
 >>>>>>> dev
         {props.author ? (
-          <h1 className="author-name"> Author: {props.author.name} </h1>
+          <h1 id="post-body"> Author: {props.author.name} </h1>
         ) : (
           ""
-        )}{" "}
+        )}
       </div>
     );
   }

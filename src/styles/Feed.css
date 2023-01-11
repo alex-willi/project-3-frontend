@@ -1,27 +1,11 @@
-/* .feed {
-    width: 300px;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
-
 .feedtitle {
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-size: 60px;
+    color: white;
 }
 
-
-/* #allposts {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
 .post-title {
-    text-align: center;
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     color: black;
@@ -34,36 +18,15 @@
     color: black;
 }
 
-
-/* .feed-image {
-    height: auto;
-    width: auto;
-    display: flex;
-} */
-
 .postlink {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     text-decoration: none;
-    /* justify-content: center; */
+    color: black;
 }
 
 .feedlist {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
     background-color: black;
-}
-
-.postlink {
-    width: auto;
-    height: auto;
-    /*  */
-    /* justify-content: center;
-    border-radius: 15px;
-    width: 300px;
-    height: 400px; */
-    /* margin: 20px;
-    text-decoration: none; */
 }
 
 .postlink:hover {
@@ -75,24 +38,29 @@
 .feeds-flex {
     display: flex;
     flex-wrap: wrap;
-}
-
-.user-list {
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 img.feed-image {
     width: auto;
-    height: 160px;
+    height: 200px;
     margin: auto;
+}
+
+
+/* delete-btn .delete-btn {
+    margin-left: 20px;
+} */
+
+img.feed-image>h {
+    color: black;
 }
 
 a.postlink {
     margin: 40px;
-    width: 300px;
+    width: 700px;
     height: fit-content;
-    background-color: transparent;
+    background-color: white;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -111,10 +79,11 @@ div.container {
     height: 30px;
 }
 
-#post-details {
+
+/* #post-details {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 #post-body {
     text-align: center;
@@ -127,9 +96,8 @@ div.container {
 }
 
 #allposts {
-    color: black;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #list {
@@ -137,34 +105,9 @@ div.container {
     flex-wrap: wrap;
 }
 
-
-/* #user-list,
-#pics {
+#edit-form {
+    justify-content: center;
     display: flex;
-    align-items: center;
-}
-
-#authorsinfo {}
-
-#pic-alex,
-#pic-brandon,
-#pic-cagdas {
-    margin-top: -100px;
-    margin-left: 130px;
-    padding: 100px;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-.alex-image,
-.cagdas-image,
-.brandon-image {
-    border-style: solid;
-    border-radius: 5px;
-    width: 200px;
-    height: 200px;
-    margin: 225px;
-    margin-top: 25px;
 }
 
 #authorsname {
@@ -172,17 +115,13 @@ div.container {
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-    padding: 20px;
 }
 
 #authorname {
-    padding: 20px;
+    padding: 120px;
 }
 
-
-/* .user-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 200px;
-    grid-gap: 20px;
-} */
+.post-title {
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
