@@ -18,12 +18,7 @@ function AuthorsDetails() {
   const getPostsHTML = () => {
     if (author.posts) {
       return author.posts.map((post) => (
-        <AuthorPost
-          key={post.id}
-          post={post}
-          author={author.author.name}
-          onDelete={handleDelete}
-        />
+        <AuthorPost key={post.id} post={post} onDelete={handleDelete} />
       ));
     }
     return "";
@@ -88,7 +83,7 @@ function AuthorsDetails() {
 
   return author ? (
     <>
-      <p className="authorname"> {author.name} </p>
+      <p className="authorname"> Posted By: {author.author.name}</p>
       <form onSubmit={handleSubmit}>
         <div className="authorpost">
           <input

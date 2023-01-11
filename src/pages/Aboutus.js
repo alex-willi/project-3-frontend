@@ -32,11 +32,13 @@ function AboutUs() {
           </div>
           <div className="Info">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos natus
-              animi voluptates suscipit aperiam rerum officiis, dolores at illo
-              beatae. Ad ullam, omnis dignissimos explicabo tempore doloremque.
-              Distinctio fugit minima ducimus voluptatem magni quia
-              exercitationem ad reiciendis ex! Eos, laudantium?
+              I am a highly skilled and dedicated full-stack software engineer
+              with a passion for delivering innovative and effective solutions
+              to complex problems. With my strong understanding of both
+              front-end and back-end development, I am able to provide complete
+              and seamless software experiences. My attention to detail and
+              ability to think outside of the box allow me to create unique and
+              effective solutions for my clients
             </p>
           </div>
         </div>

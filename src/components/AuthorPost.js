@@ -4,20 +4,17 @@ import { Link } from "react-router-dom";
 
 function AuthorPost(props) {
   const { post } = props;
-  const { author } = props;
-
   if (post) {
     return (
       <>
         <Link to={`/feed/`}>
           {props.onDelete && (
-            <button onClick={() => props.onDelete(post._id)}>
+            <button id="delete-btn" onClick={() => props.onDelete(post._id)}>
               Delete Post
             </button>
           )}
         </Link>
         <div id="allposts">
-          <h1>{author}</h1>
           <Link key={post.id} className="postlink" to={`/posts/${post._id}`}>
             <h1 className="post-title">{post.title}</h1>
             <img className="feed-image" src={post.photo} alt="sports"></img>

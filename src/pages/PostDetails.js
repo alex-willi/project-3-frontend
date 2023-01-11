@@ -84,7 +84,7 @@ function PostDetails() {
       <div>
         <form id="edit-form" onSubmit={(e) => handleForm(e, post._id)}>
           <div>
-            <label htmlFor="name">
+            <label id="label-name" htmlFor="name">
               Title
               <input
                 type="text"
@@ -97,7 +97,7 @@ function PostDetails() {
             </label>
           </div>
           <div>
-            <label htmlFor="image">
+            <label id="label-image" htmlFor="image">
               Image
               <input
                 type="text"
@@ -110,7 +110,7 @@ function PostDetails() {
             </label>
           </div>
           <div>
-            <label htmlFor="title">
+            <label id="label-body" htmlFor="title">
               Body
               <input
                 type="text"

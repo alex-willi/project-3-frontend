@@ -23,7 +23,7 @@ function Feed(props) {
   if (posts) {
     return (
       <>
-        <h1 className="feedtitle"> Feed Page </h1>
+        <h1 className="feedtitle">... Dive In ... </h1>
         <div className="feeds-flex">
           {posts.map((post) => {
             return (
