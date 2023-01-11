@@ -75,3 +75,15 @@ input {
     padding: 40px;
     width: 200px;
 }
+
+#posts-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#pic-alex,
+#pic-cagdas,
+#pic-brandon {
+    margin: 20px;
+}

@@ -1,5 +1,5 @@
 function Delete(props) {
-    return;
+  return;
 }
 
 export default Delete;

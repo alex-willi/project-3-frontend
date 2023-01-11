@@ -21,6 +21,7 @@ function AuthorPost(props) {
           <img className="feed-image" src={post.photo} alt="sports"></img>
           <h1>{post.body}</h1>
         </Link>
+
         {props.author ? (
           <h1 className="author-name">Author: {props.author.name}</h1>
         ) : (

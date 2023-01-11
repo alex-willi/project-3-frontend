@@ -14,36 +14,56 @@
     font-size: 60px;
 }
 
-#allposts {}
+
+/* #allposts {
+    display: flex;
+    flex-wrap: wrap;
+} */
 
 .post-title {
     text-align: center;
     text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: black;
 }
 
-.feed-image {
-    height: 250px;
-    width: auto;
-    /* display: flex; */
+#home,
+#feed,
+#authors,
+#aboutus {
+    color: black;
 }
+
+
+/* .feed-image {
+    height: auto;
+    width: auto;
+    display: flex;
+} */
 
 .postlink {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    text-decoration: none;
+    /* justify-content: center; */
 }
 
-.feedlist,
+.feedlist {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    background-color: black;
+}
+
 .postlink {
-    /* width: auto; */
-    /* height: auto; */
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    /* border-radius: 15px; */
-    /* width: 300px;
+    width: auto;
+    height: auto;
+    /*  */
+    /* justify-content: center;
+    border-radius: 15px;
+    width: 300px;
     height: 400px; */
-    margin: 20px;
-    text-decoration: none;
+    /* margin: 20px;
+    text-decoration: none; */
 }
 
 .postlink:hover {
@@ -52,33 +72,89 @@
     cursor: pointer;
 }
 
+.feeds-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .user-list {
-    font-size: 30px;
     display: flex;
     justify-content: space-around;
 }
 
-.authors {
-    text-align: center;
+img.feed-image {
+    width: auto;
+    height: 160px;
+    margin: auto;
 }
 
-.authorslink h1 {
-    font-size: 24px;
-    margin-top: 50px;
+a.postlink {
+    margin: 40px;
+    width: 300px;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid gray;
 }
 
-.user-list {
+#feedsdetails {
+    align-items: left;
+}
+
+div.container {
+    text-align: left;
+}
+
+#details-pic {
+    height: 30px;
+}
+
+#post-details {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-.user-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 200px;
-    grid-gap: 20px;
+#post-body {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: black;
 }
+
+#input {
+    color: black;
+}
+
+#allposts {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* #user-list,
+#pics {
+    display: flex;
+    align-items: center;
+}
+
+#authorsinfo {}
+
+#pic-alex,
+#pic-brandon,
+#pic-cagdas {
+    margin-top: -100px;
+    margin-left: 130px;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+} */
 
 .alex-image,
 .cagdas-image,
@@ -90,3 +166,23 @@
     margin: 225px;
     margin-top: 25px;
 }
+
+#authorsname {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#authorname {
+    padding: 20px;
+}
+
+
+/* .user-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 200px;
+    grid-gap: 20px;
+} */
