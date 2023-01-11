@@ -93,13 +93,6 @@ div.container {
     color: black;
 }
 
-#delete-btn {
-    padding: 15px;
-    margin-left: 95px;
-    margin-top: 90px;
-    background-color: white;
-}
-
 #allposts {
     display: flex;
     justify-content: center;

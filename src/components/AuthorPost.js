@@ -11,7 +11,7 @@ function AuthorPost(props) {
       <>
         <Link to={`/feed/`}>
           {props.onDelete && (
-            <button onClick={() => props.onDelete(post._id)}>
+            <button id="delete-btn" onClick={() => props.onDelete(post._id)}>
               Delete Post
             </button>
           )}
