@@ -5,12 +5,14 @@
 .authorslink h1 {
     font-size: 24px;
     margin-top: 50px;
+    color: white;
 }
 
 .user-list {
     font-size: 30px;
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 .user-list {

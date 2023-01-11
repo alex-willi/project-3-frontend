@@ -1,5 +1,10 @@
 body {
-    background-color: rgb(231, 231, 231);
+    background-image: url("https://images.hdqwalls.com/wallpapers/football-stadium-4k-2v.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .nav {
@@ -12,6 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 25px;
+    background-color: white;
 }
 
 #home,
