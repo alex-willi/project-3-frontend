@@ -15,6 +15,17 @@
     border-radius: 5px;
 }
 
+.authorname {
+    color: white;
+}
+
+#label-name,
+#label-image,
+#label-body {
+    color: white;
+    font-size: 20px;
+}
+
 .comment-flexbox {
     width: 100%;
     display: flex;
@@ -56,6 +67,7 @@
 .post-title {
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
 .feed-image {
@@ -77,9 +89,3 @@
     font-size: 18px;
     font-style: italic;
 }
-
-
-/* #user-list {
-    display: flex;
-    flex-direction: column;
-} */

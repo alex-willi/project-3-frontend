@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "../styles/Comments.css";
 
 function Comments(props) {
-  console.log(props);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
@@ -23,7 +22,6 @@ function Comments(props) {
   useEffect(() => {
     setComments(props.comments);
   }, []);
-  console.log(comment);
 
   return (
     <div className="container">
