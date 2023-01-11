@@ -1,0 +1,38 @@
+.authors {
+    text-align: center;
+}
+
+.authorslink h1 {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.user-list {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 200px;
+    grid-gap: 20px;
+}
+
+.alex-image,
+.cagdas-image,
+.brandon-image {
+    border-style: solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    margin: 225px;
+    margin-top: 25px;
+}

@@ -77,10 +77,11 @@
     flex-wrap: wrap;
 }
 
-.user-list {
+
+/* .user-list {
     display: flex;
     justify-content: space-around;
-}
+} */
 
 img.feed-image {
     width: auto;
@@ -156,7 +157,8 @@ div.container {
     flex-wrap: wrap;
 } */
 
-.alex-image,
+
+/* .alex-image,
 .cagdas-image,
 .brandon-image {
     border-style: solid;
@@ -165,18 +167,18 @@ div.container {
     height: 200px;
     margin: 225px;
     margin-top: 25px;
-}
+} */
 
 #authorsname {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 #authorname {
-    padding: 20px;
+    padding: 120px;
 }
 
 
