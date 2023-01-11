@@ -153,8 +153,7 @@ function PostDetails() {
   if (post) {
     return (
       <div>
-        <form onSubmit={(e) => handleForm(e, post._id)}>
-          <input type="submit" value="Edit post" />
+        <form id="edit-form" onSubmit={(e) => handleForm(e, post._id)}>
           <div>
             <label htmlFor="name">
               Title
@@ -192,6 +191,7 @@ function PostDetails() {
                 value={editForm.body}
                 onChange={handleFormChange}
               />
+              <input type="submit" value="Edit post" />
             </label>
             <br />
           </div>
