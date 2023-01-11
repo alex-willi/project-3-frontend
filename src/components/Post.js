@@ -6,7 +6,6 @@ function Post(props) {
       <div id="all-posts">
         <h1 className="posttitle">{props.post.title}</h1>
         <img className="feedimage" src={props.post.photo} alt="sports"></img>
-        {/* <h1>{props.author.name}</h1> */}
         {props.author ? (
           <h1 className="author-name">Author: {props.author.name}</h1>
         ) : (

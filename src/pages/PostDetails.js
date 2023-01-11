@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import Post from "../components/Post";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
 import Comments from "../components/Comments";
 import AuthorPost from "../components/AuthorPost";
